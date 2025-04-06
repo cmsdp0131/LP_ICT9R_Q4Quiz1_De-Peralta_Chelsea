@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Fare Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateDiscount() {
+            let fare = parseFloat(document.getElementById("fare").value);
+            let discountedFare = fare * 0.8; // 20% discount
+            document.getElementById("result").innerHTML = "Discounted Fare: Php " + discountedFare.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Rail Transit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Transit Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <h1 class="text-center">Train Fare Guide</h1>
+        <p>Welcome to the Manila Metro Rail Transit Fare Guide. Get information on fares, schedules, and ticket types.</p>
+        
+        <h2>Transit Map</h2>
+        <img src="https://www.metrolinemap.com/wp-content/uploads/2020/11/metro-manila-lrt-mrt-map-2020.jpg" class="img-fluid" alt="Metro Manila Rail Map">
+        
+        <h2>Types of Tickets</h2>
+        <ul>
+            <li>Single Journey Ticket</li>
+            <li>Stored Value Ticket (Beep Card)</li>
+        </ul>
+        
+        <h2>Train Schedule</h2>
+        <p>Operating hours: 5:00 AM – 10:00 PM</p>
+        
+        <h2>Calculate Discounted Fare</h2>
+        <input type="number" id="fare" placeholder="Enter Regular Fare">
+        <button class="btn btn-primary" onclick="calculateDiscount()">Calculate</button>
+        <p id="result"></p>
+        
+        <h2>Comment/Feedback</h2>
+        <textarea class="form-control" placeholder="Leave a comment..."></textarea>
+        <button class="btn btn-success mt-2">Submit</button>
+        
+        <h2 id="contact">Contact Information</h2>
+        <p>Email: support@railtransit.com</p>
+        <p>Phone: +63 123 456 7890</p>
+    </div>
+    
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>Created by [Your Name], Grade & Section</p>
+        <p>Source: <a href="https://www.metrolinemap.com/metro/manila/" class="text-white">Metro Line Map</a></p>
+    </footer>
+</body>
+</html>
